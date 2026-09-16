@@ -1,0 +1,9 @@
+openai
+supabase
+python-dotenv
+pydantic
+fastapi
+uvicorn
+pathlib
+pypdf
+typing
