@@ -6,7 +6,6 @@ from schema import FullOfficerResponse
 from dotenv import load_dotenv
 from pydantic import BaseModel
 
-
 load_dotenv()
 # Initialize SDKs
 openai_client = OpenAI(api_key=os.environ.get("OPENAI_API_KEY"))
@@ -128,8 +127,9 @@ TEXT CONTENT:
 
 if __name__ == "__main__":
     # Local Test Run
-    q = "Hoe vraag ik een vaste standplaats aan op de markt in Schoten?"
+    q = input("Voer hier je vraag in: ")
     m = extract_municipality(q)
     
     output = generate_officer_payload(q, m)
-    print(json.dumps(output, indent=2, ensure_ascii=False))
+    js = json.dumps(output, indent=2, ensure_ascii=False)
+    print(js)

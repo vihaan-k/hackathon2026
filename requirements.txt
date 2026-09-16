@@ -7,3 +7,4 @@ uvicorn
 pathlib
 pypdf
 typing
+streamlit
